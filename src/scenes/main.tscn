@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://t0sgs66mnn4r"]
+
+[ext_resource type="Script" path="res://src/scenes/main.gd" id="1_gn1hs"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_gn1hs")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+offset_left = 555.0
+offset_top = 280.0
+offset_right = 639.0
+offset_bottom = 311.0
+text = "Click here
+"
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 49.0
+offset_top = 56.0
+offset_right = 539.0
+offset_bottom = 507.0
+text = "if distanceEnemy > 7 then
+	act[1] = 100
+elseif distanceEnemy > 3 then
+	act[2] = 100
+else
+	act[3] = 100
+end"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 720.0
+offset_top = 55.0
+offset_right = 1151.0
+offset_bottom = 510.0
+text = "RichTextLabel
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="gui_input" from="TextEdit" to="." method="_on_text_edit_gui_input"]
