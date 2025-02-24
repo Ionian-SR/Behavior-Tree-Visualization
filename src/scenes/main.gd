@@ -13,7 +13,6 @@ func _on_button_pressed() -> void:
 	bt_nodes.append(bt_node)
 	add_child(bt_node)
 	Parser.parse(text_edit.text)
-	#print("test")
 	pass
 
 func _on_text_edit_gui_input(event: InputEvent) -> void:
